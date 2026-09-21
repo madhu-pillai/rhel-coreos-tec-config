@@ -1,4 +1,4 @@
-# Manifest for RHCOS based on RHEL 9.8
+# Manifest for RHCOS based on RHEL 10.2
 
 metadata:
   # tell `cosa build` to default to buildah path
@@ -9,9 +9,9 @@ include:
   - common.yaml
 
 repos:
-  - rhel-9.6-baseos
-  - rhel-9.6-appstream
-  - rhel-9.6-early-kernel
+  - rhel-10.2-baseos
+  - rhel-10.2-appstream
+  - rhel-10.2-early-kernel
 
 # Packages that are only in RHCOS and not in SCOS or that have special
 # constraints that do not apply to SCOS
@@ -19,3 +19,4 @@ packages:
  # We include the generic release package and tweak the os-release info in a
  # post-process script
  - redhat-release
+
