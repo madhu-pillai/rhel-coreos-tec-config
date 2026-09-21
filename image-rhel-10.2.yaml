@@ -1,0 +1,6 @@
+include: "rhel-coreos-config/image-rhel-10.2.yaml"
+# Enable 'erofs' by default for the rootfs in the Live ISO/PXE artifacts
+live-rootfs-fstype: "erofs"
+live-rootfs-fsoptions: "-zlzma,level=6 -Efragments -C1048576 --quiet"
+extra-kargs:
+  - console=ttyS0,115200n8
